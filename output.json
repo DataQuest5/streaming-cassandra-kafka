@@ -1,0 +1,291 @@
+{
+    "schema": {
+      "type": "struct",
+      "fields": [
+        {
+          "type": "int64",
+          "optional": true,
+          "field": "id"
+        }
+      ],
+      "optional": false,
+      "name": "io.debezium.connector.cassandra.test_prefix.testdb.transactions.Key"
+    },
+    "payload": {
+      "id": 29424
+    }
+  }
+  {
+    "schema": {
+      "type": "struct",
+      "fields": [
+        {
+          "type": "int64",
+          "optional": false,
+          "field": "ts_ms"
+        },
+        {
+          "type": "string",
+          "optional": false,
+          "field": "op"
+        },
+        {
+          "type": "struct",
+          "fields": [
+            {
+              "type": "string",
+              "optional": false,
+              "field": "version"
+            },
+            {
+              "type": "string",
+              "optional": false,
+              "field": "connector"
+            },
+            {
+              "type": "string",
+              "optional": false,
+              "field": "name"
+            },
+            {
+              "type": "int64",
+              "optional": false,
+              "field": "ts_ms"
+            },
+            {
+              "type": "string",
+              "optional": true,
+              "name": "io.debezium.data.Enum",
+              "version": 1,
+              "parameters": {
+                "allowed": "true,last,false,incremental"
+              },
+              "default": "false",
+              "field": "snapshot"
+            },
+            {
+              "type": "string",
+              "optional": false,
+              "field": "db"
+            },
+            {
+              "type": "string",
+              "optional": true,
+              "field": "sequence"
+            },
+            {
+              "type": "string",
+              "optional": false,
+              "field": "cluster"
+            },
+            {
+              "type": "string",
+              "optional": false,
+              "field": "file"
+            },
+            {
+              "type": "int32",
+              "optional": false,
+              "field": "pos"
+            },
+            {
+              "type": "string",
+              "optional": false,
+              "field": "keyspace"
+            },
+            {
+              "type": "string",
+              "optional": false,
+              "field": "table"
+            }
+          ],
+          "optional": false,
+          "name": "source",
+          "field": "source"
+        },
+        {
+          "type": "struct",
+          "fields": [
+            {
+              "type": "struct",
+              "fields": [
+                {
+                  "type": "int64",
+                  "optional": true,
+                  "field": "value"
+                },
+                {
+                  "type": "int64",
+                  "optional": true,
+                  "field": "deletion_ts"
+                },
+                {
+                  "type": "boolean",
+                  "optional": false,
+                  "field": "set"
+                }
+              ],
+              "optional": true,
+              "name": "id",
+              "field": "id"
+            },
+            {
+              "type": "struct",
+              "fields": [
+                {
+                  "type": "string",
+                  "optional": true,
+                  "field": "value"
+                },
+                {
+                  "type": "int64",
+                  "optional": true,
+                  "field": "deletion_ts"
+                },
+                {
+                  "type": "boolean",
+                  "optional": false,
+                  "field": "set"
+                }
+              ],
+              "optional": true,
+              "name": "account",
+              "field": "account"
+            },
+            {
+              "type": "struct",
+              "fields": [
+                {
+                  "type": "string",
+                  "optional": true,
+                  "field": "value"
+                },
+                {
+                  "type": "int64",
+                  "optional": true,
+                  "field": "deletion_ts"
+                },
+                {
+                  "type": "boolean",
+                  "optional": false,
+                  "field": "set"
+                }
+              ],
+              "optional": true,
+              "name": "day",
+              "field": "day"
+            },
+            {
+              "type": "struct",
+              "fields": [
+                {
+                  "type": "string",
+                  "optional": true,
+                  "field": "value"
+                },
+                {
+                  "type": "int64",
+                  "optional": true,
+                  "field": "deletion_ts"
+                },
+                {
+                  "type": "boolean",
+                  "optional": false,
+                  "field": "set"
+                }
+              ],
+              "optional": true,
+              "name": "hash",
+              "field": "hash"
+            },
+            {
+              "type": "struct",
+              "fields": [
+                {
+                  "type": "string",
+                  "optional": true,
+                  "field": "value"
+                },
+                {
+                  "type": "int64",
+                  "optional": true,
+                  "field": "deletion_ts"
+                },
+                {
+                  "type": "boolean",
+                  "optional": false,
+                  "field": "set"
+                }
+              ],
+              "optional": true,
+              "name": "transaction",
+              "field": "transaction"
+            },
+            {
+              "type": "string",
+              "optional": true,
+              "field": ".range_start"
+            },
+            {
+              "type": "string",
+              "optional": true,
+              "field": ".range_end"
+            }
+          ],
+          "optional": false,
+          "name": "after",
+          "field": "after"
+        }
+      ],
+      "optional": false,
+      "name": "io.debezium.connector.cassandra.test_prefix.testdb.transactions.Envelope"
+    },
+    "payload": {
+      "ts_ms": 1670152340997,
+      "op": "i",
+      "source": {
+        "version": "2.0.0.Final",
+        "connector": "cassandra",
+        "name": "test_prefix",
+        "ts_ms": 1670152063973,
+        "snapshot": "false",
+        "db": "NULL",
+        "sequence": null,
+        "cluster": "Test Cluster",
+        "file": "CommitLog-7-1670151945095.log",
+        "pos": 236056,
+        "keyspace": "testdb",
+        "table": "transactions"
+      },
+      "after": {
+        "id": {
+          "value": 29424,
+          "deletion_ts": null,
+          "set": true
+        },
+        "account": {
+          "value": "A29424",
+          "deletion_ts": null,
+          "set": true
+        },
+        "day": {
+          "value": "d29424",
+          "deletion_ts": null,
+          "set": true
+        },
+        "hash": {
+          "value": "HV29424",
+          "deletion_ts": null,
+          "set": true
+        },
+        "transaction": {
+          "value": "T29424",
+          "deletion_ts": null,
+          "set": true
+        },
+        ".range_start": null,
+        ".range_end": null
+      }
+    }
+  }
+  

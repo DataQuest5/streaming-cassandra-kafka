@@ -1,0 +1,38 @@
+version: '2'
+services:
+  zookeeper:
+    image: quay.io/debezium/zookeeper:2.0
+    ports:
+      - 2181:2181
+      - 2888:2888
+      - 3888:3888
+  kafka:
+    image: quay.io/debezium/kafka:2.0
+    ports:
+      - 9092:9092
+    links:
+      - zookeeper
+    environment:
+      - ZOOKEEPER_CONNECT=zookeeper:2181
+
+  cassandra:
+    image: debezium/example-cassandra:2.0
+    build:
+      context: ./cassandra-init
+    ports:
+      - 9042:9042
+    links:
+      - zookeeper
+      - kafka
+    volumes:
+      - /var/lib/cassandra
+
+  jupyter:
+    image: almondsh/almond:latest
+    ports:
+      - 8888:8888
+      - 8889:8889
+    links:
+    #   - zookeeper
+      - kafka
+    #   - cassandra
