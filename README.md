@@ -24,8 +24,6 @@ docker-compose logs jupyter --follow
 
 You'll see the jupyter link that you can use to login to the interface.
 
-## Access spark interface
-Spark interface is available on: `localhost:8889`
 
 ## Start the Kafka console consumer in separate terminal:
 
