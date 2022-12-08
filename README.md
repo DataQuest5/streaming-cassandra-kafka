@@ -24,6 +24,10 @@ docker-compose logs jupyter --follow
 
 You'll see the jupyter link that you can use to login to the interface.
 
+The `kafka-consumer.ipynb` notebook will be mounted to the image automatically and be available on the right panel of jupyter interface.
+
+The changes are automatically propagated to the host machine.
+
 
 ## Start the Kafka console consumer in separate terminal:
 
