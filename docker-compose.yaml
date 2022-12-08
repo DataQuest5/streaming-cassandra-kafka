@@ -32,6 +32,8 @@ services:
     ports:
       - 8888:8888
       - 8889:8889
+    volumes:
+      - ./jupyter/kafka-consumer.ipynb:/home/jovyan/kafka-consumer.ipynb
     links:
     #   - zookeeper
       - kafka
